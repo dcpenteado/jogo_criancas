@@ -114,6 +114,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 e12de2c36731a7f74a51630dedfe58c0 Assembly-CSharp.dll:.PowerUp
 322cb40e1e282f28af980cbef7922a90 UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsEventTracker
 dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.GlobalVars
 bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInput
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
@@ -158,6 +159,7 @@ f40f772211f8e5c86e9c3da3c1692a9e Assembly-CSharp.dll:.DiamondsGenerator
 fc166cc81452f77650c1d861131d61e0 Assembly-CSharp.dll:.PlayerController
 eb1ab7a518645bb5404e9e9c98a06a4c Assembly-CSharp.dll:.PlatformGenerator
 7c6fb094f5246b8f18656fe8bd7cfc58 Assembly-CSharp.dll:.PickupPoint
+e8ab5866b4e7b4e3eafaba4f0e0aca29 Assembly-CSharp.dll:.Parallax
 75c62d27ba1b8fec3b09a7cb442d3b62 Assembly-CSharp.dll:.PauseMenu
-631d57eab05be18c563d1a881e77a3f2 Assembly-CSharp.dll:.CameraController
+86689513b63c084eb2aef4a6dae56486 Assembly-CSharp.dll:.CameraController
 8621feb6c1fb8c93f132c6f88970ddc5 Assembly-CSharp.dll:.StartPoint

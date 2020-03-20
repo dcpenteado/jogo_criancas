@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Text;
 
 public class PlayerController : MonoBehaviour {
     public float moveSpeed;
@@ -37,6 +38,9 @@ public class PlayerController : MonoBehaviour {
     void Start() {
         myRigidbody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
+
+        myAnimator.SetBool("RicardinhoPlayer", GlobalVars.isRicardinho);
+        myAnimator.Play("PlayerState");
 
         speedMilestoneCounts = speedIncreaseMilestone;
 
@@ -97,6 +101,7 @@ public class PlayerController : MonoBehaviour {
         // Setup animators
         myAnimator.SetFloat("Speed", myRigidbody.velocity.x);
         myAnimator.SetBool("IsOnGround", isOnGround);
+        myAnimator.SetBool("RicardinhoPlayer", GlobalVars.isRicardinho);
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
