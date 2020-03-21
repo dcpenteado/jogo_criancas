@@ -161,5 +161,5 @@ eb1ab7a518645bb5404e9e9c98a06a4c Assembly-CSharp.dll:.PlatformGenerator
 7c6fb094f5246b8f18656fe8bd7cfc58 Assembly-CSharp.dll:.PickupPoint
 e8ab5866b4e7b4e3eafaba4f0e0aca29 Assembly-CSharp.dll:.Parallax
 75c62d27ba1b8fec3b09a7cb442d3b62 Assembly-CSharp.dll:.PauseMenu
-86689513b63c084eb2aef4a6dae56486 Assembly-CSharp.dll:.CameraController
+631d57eab05be18c563d1a881e77a3f2 Assembly-CSharp.dll:.CameraController
 8621feb6c1fb8c93f132c6f88970ddc5 Assembly-CSharp.dll:.StartPoint
