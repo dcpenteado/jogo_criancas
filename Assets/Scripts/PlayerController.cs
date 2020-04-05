@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour {
     public float groundCheckRadius;
     private bool stopJumpping;
     private bool canDoubleJumping;
+    private bool canJump;
 
     private Rigidbody2D myRigidbody;
     private Animator myAnimator;
@@ -52,6 +53,9 @@ public class PlayerController : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+
+        if (Input.GetKeyDown(KeyCode.Escape)) Application.Quit();
+
         // Detect the ground
         isOnGround = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, groundLayer);
 
@@ -66,32 +70,33 @@ public class PlayerController : MonoBehaviour {
         // Moving right
         myRigidbody.velocity = new Vector2(moveSpeed, myRigidbody.velocity.y);
 
+
         // Jump (Space and left key of mouse)
         if (isActiveAndEnabled &&
             (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))) {
-            jumpSound.Play();
             if (isOnGround) {
                 myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpForce);
                 stopJumpping = false;
-            } else if (canDoubleJumping) {
-                canDoubleJumping = false;
-                jumpTimeCounter = jumpTime;
-                myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpForce);
-                stopJumpping = false;
+                jumpSound.Play();
+            }
+            else {
+                if (canDoubleJumping)
+                {
+                    jumpSound.Play();
+                    canDoubleJumping = false;
+                    jumpTimeCounter = jumpTime;
+                    myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpForce);
+                    stopJumpping = false;
+                }
             }
         }
 
-        if ((Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0)) && !stopJumpping) {
-            if (jumpTimeCounter > 0) {
-                myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, jumpForce);
-                jumpTimeCounter -= Time.deltaTime;
-            }
-        }
-
+        
         if (Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonUp(0)) {
             jumpTimeCounter = 0; // Lock user keeping jumping
             stopJumpping = true;
         }
+        
 
         if (isOnGround) {
             jumpTimeCounter = jumpTime;

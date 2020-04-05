@@ -2450,14 +2450,14 @@ MonoBehaviour:
   moveSpeed: 7.5
   speedMutiplier: 1.05
   speedIncreaseMilestone: 200
-  jumpForce: 15
+  jumpForce: 17
   jumpTime: 0.05
   isOnGround: 0
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
   groundCheckPoint: {fileID: 1324339658}
-  groundCheckRadius: 0.1
+  groundCheckRadius: 0.4
   gameManager: {fileID: 1659138564}
   jumpSound: {fileID: 1763909206}
   deathSound: {fileID: 452932586}
